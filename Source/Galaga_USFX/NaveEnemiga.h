@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "NaveEnemiga.generated.h"
 
-UCLASS()
+UCLASS(abstract)
 class GALAGA_USFX_API ANaveEnemiga : public AActor
 {
 	GENERATED_BODY()
@@ -18,10 +18,10 @@ public:
 	
 protected:
 
-	float Velocidad;
 	float Resistencia;
 	float DanoGenerado;
 	FVector Posicion;
+	FVector Nombre;
 	float TiempoDisparo;
 	float PatronMovimiento;
 	float CapacidadBalas;
@@ -30,10 +30,11 @@ protected:
 	float Volumen;
 
 public:
-	FORCEINLINE float GetVelocidad() const { return Velocidad; }
+	//FORCEINLINE float GetVelocidad() const { return Velocidad; }
 	FORCEINLINE float GetResistencia() const { return Resistencia; }
 	FORCEINLINE float GetDanoGenerado() const { return DanoGenerado; }
 	FORCEINLINE FVector GetPosicion() const { return Posicion; }
+	FORCEINLINE FVector GetNombre() const { return Nombre; }
 	FORCEINLINE float GetTiempoDisparo() const { return TiempoDisparo; }
 	FORCEINLINE float GetPatronMovimiento() const { return PatronMovimiento; }
 	FORCEINLINE float GetCapacidadBalas() const { return CapacidadBalas; }
@@ -41,10 +42,11 @@ public:
 	FORCEINLINE float GetPeso() const { return Peso; }
 	FORCEINLINE float GetVolumen() const { return Volumen; }
 
-	FORCEINLINE void SetVelocidad(float _Velocidad) { Velocidad = _Velocidad; }
+	//FORCEINLINE void SetVelocidad(float _Velocidad) { Velocidad = _Velocidad; }
 	FORCEINLINE void SetResistencia(float _Resistencia) { Resistencia = _Resistencia; }
 	FORCEINLINE void SetDanoGenerado(float _DanoGenerado) { DanoGenerado = _DanoGenerado; }
 	FORCEINLINE void SetPosicion(FVector _Posicion) { Posicion = _Posicion; }
+	FORCEINLINE void SetNombre(FVector _Nombre) { Posicion = _Nombre; }
 	FORCEINLINE void SetTiempoDisparo(float _TiempoDisparo) { TiempoDisparo = _TiempoDisparo; }
 	FORCEINLINE void SetPatronMovimiento(float _PatronMovimiento) { PatronMovimiento = _PatronMovimiento; }
 	FORCEINLINE void SetCapacidadBalas(float _CapacidadBalas) { CapacidadBalas = _CapacidadBalas; }
