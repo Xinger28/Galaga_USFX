@@ -14,6 +14,4 @@ class GALAGA_USFX_API ANaveEnemigaEspia : public ANaveEnemiga
 {
 	GENERATED_BODY()
 	
-private:
-	
 };

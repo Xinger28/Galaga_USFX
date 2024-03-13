@@ -22,8 +22,9 @@ public:
 	ANaveEnemigaCaza();
 	FORCEINLINE int GetCantidadBombas() const { return CantitadadExplosivos; }
 	FORCEINLINE void SetCantidadBombas(int _cantitadadExplosivos) { CantitadadExplosivos = _cantitadadExplosivos; }
+
 protected:
-	virtual void Mover();
+
 	virtual void Disparar();
 	virtual void Destruccion();
 };

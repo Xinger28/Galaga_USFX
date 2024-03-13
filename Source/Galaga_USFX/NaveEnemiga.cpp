@@ -29,6 +29,7 @@ void ANaveEnemiga::BeginPlay()
 void ANaveEnemiga::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	FVector NewLocation = GetActorLocation() + FVector(-1, 0, 0) * Speed * DeltaTime;
+	SetActorLocation(NewLocation);
 }
 

@@ -9,10 +9,6 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 }
 
-void ANaveEnemigaCaza::Mover()
-{
-}
-
 void ANaveEnemigaCaza::Disparar()
 {
 }

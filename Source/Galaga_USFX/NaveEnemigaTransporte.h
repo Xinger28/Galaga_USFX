@@ -13,10 +13,7 @@ UCLASS()
 class GALAGA_USFX_API ANaveEnemigaTransporte : public ANaveEnemiga
 {
 	GENERATED_BODY()
-//
-//public:
-//	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = mallaNaveEnemiga, meta = (AllowPrivateAccess = "true"))
-//	UStaticMeshComponent* mallaNaveEnemiga;
+
 	
 private:
 	float capacidadMaxPeso;
@@ -39,7 +36,4 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	float Speed;
-
 };

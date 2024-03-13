@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "NaveEnemiga.generated.h"
 
-UCLASS(abstract)
+UCLASS(ABSTRACT)
 class GALAGA_USFX_API ANaveEnemiga : public AActor
 {
 	GENERATED_BODY()
@@ -30,7 +30,7 @@ protected:
 	float Volumen;
 
 public:
-	//FORCEINLINE float GetVelocidad() const { return Velocidad; }
+
 	FORCEINLINE float GetResistencia() const { return Resistencia; }
 	FORCEINLINE float GetDanoGenerado() const { return DanoGenerado; }
 	FORCEINLINE FVector GetPosicion() const { return Posicion; }
@@ -42,7 +42,7 @@ public:
 	FORCEINLINE float GetPeso() const { return Peso; }
 	FORCEINLINE float GetVolumen() const { return Volumen; }
 
-	//FORCEINLINE void SetVelocidad(float _Velocidad) { Velocidad = _Velocidad; }
+	
 	FORCEINLINE void SetResistencia(float _Resistencia) { Resistencia = _Resistencia; }
 	FORCEINLINE void SetDanoGenerado(float _DanoGenerado) { DanoGenerado = _DanoGenerado; }
 	FORCEINLINE void SetPosicion(FVector _Posicion) { Posicion = _Posicion; }
@@ -58,6 +58,7 @@ public:
 public:	
 	// Sets default values for this actor's properties
 	ANaveEnemiga();
+	float Speed;
 
 protected:
 	// Called when the game starts or when spawned
@@ -66,5 +67,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
 
 };
