@@ -1,0 +1,7 @@
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX\Definitions.Galaga_USFX.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimientoNv1.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimiento.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimiento.generated.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimientoNv1.generated.h

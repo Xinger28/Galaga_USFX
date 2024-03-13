@@ -13,7 +13,7 @@ UCLASS()
 class GALAGA_USFX_API ANaveEnemigaCaza : public ANaveEnemiga
 {
 	GENERATED_BODY()
-	
+
 private:
 	int ArmasEspeciales;
 	int CantitadadExplosivos;
@@ -24,7 +24,14 @@ public:
 	FORCEINLINE void SetCantidadBombas(int _cantitadadExplosivos) { CantitadadExplosivos = _cantitadadExplosivos; }
 
 protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 
-	virtual void Disparar();
+public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+protected:
+	virtual void ataque();
 	virtual void Destruccion();
 };

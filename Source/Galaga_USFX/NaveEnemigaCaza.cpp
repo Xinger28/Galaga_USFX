@@ -5,11 +5,21 @@
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Geometry/Meshes/1M_Cube.1M_Cube'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 }
 
-void ANaveEnemigaCaza::Disparar()
+void ANaveEnemigaCaza::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
+void ANaveEnemigaCaza::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+}
+
+void ANaveEnemigaCaza::ataque()
 {
 }
 

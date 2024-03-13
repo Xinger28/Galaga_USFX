@@ -14,4 +14,31 @@ class GALAGA_USFX_API ANaveEnemigaEspia : public ANaveEnemiga
 {
 	GENERATED_BODY()
 	
+private:
+	int Camuflage;
+	int VelocidadCamuflage;
+	float DuracionCamuflage;
+
+public:
+	FORCEINLINE float GetInvisibililidad() const { return Camuflage; }
+	FORCEINLINE void SetInvisibililidad(float _Camuflage) { Camuflage = _Camuflage; }
+	FORCEINLINE float GetVelocidadCamuflage() const { return VelocidadCamuflage; }
+	FORCEINLINE void SetVelocidadCamuflage(float _VelocidadCamuflage) { VelocidadCamuflage = _VelocidadCamuflage; }
+	FORCEINLINE float GetDuracionCamuflage() const { return DuracionCamuflage; }
+	FORCEINLINE void SetDuracionCamuflage(float _DuracionCamuflage) { DuracionCamuflage = _DuracionCamuflage; }
+
+public:
+		ANaveEnemigaEspia();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+protected:
+	virtual void Destruccion();
+	virtual void Retirada();
 };

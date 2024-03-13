@@ -68,5 +68,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-
+	void Ataque() PURE_VIRTUAL(ANaveEnemiga::Ataque, );
+	void Destruccion() PURE_VIRTUAL(ANaveEnemiga::Destruccion, );
+	void Retirada() PURE_VIRTUAL(ANaveEnemiga::Retirada, );
+	void Explotar() PURE_VIRTUAL(ANaveEnemiga::Explotar, );
+	void Desaparecer() PURE_VIRTUAL(ANaveEnemiga::Desaparecer, );
+	void Cargar() PURE_VIRTUAL(ANaveEnemiga::Cargar, );
+	void Defender() PURE_VIRTUAL(ANaveEnemiga::Defender, );
 };

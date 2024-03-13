@@ -23,4 +23,20 @@ public:
 	FORCEINLINE void SetTamanoGigante(float _TamanoGigante) { TamanoGigante = _TamanoGigante; }
 	FORCEINLINE float GetPatronAtaques() const { return PatronAtaques; }
 	FORCEINLINE void SetPatronAtaques(float _PatronAtaques) { PatronAtaques = _PatronAtaques; }
+
+public:
+	ANaveEnemigaJefe();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+protected:
+	virtual void Ataque();
+	virtual void Destruccion();
+
 };

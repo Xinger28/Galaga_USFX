@@ -23,4 +23,20 @@ public:
 	FORCEINLINE void SetBlindaje(float _Blindaje) { Blindaje = _Blindaje; }
 	FORCEINLINE float GetArmasDefensivas() const { return ArmasDefensivas; }
 	FORCEINLINE void SetArmasDefensivas(float _ArmasDefensivas) { ArmasDefensivas = _ArmasDefensivas; }
+
+public:
+	ANaveEnemigaProtector();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+protected:
+	virtual void Defender();
+	virtual void Destruccion();
+	virtual void Cargar();
 };

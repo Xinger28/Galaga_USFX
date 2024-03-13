@@ -21,10 +21,10 @@ private:
 
 public:
 
-	FORCEINLINE float GetCapacidadCargaPeso() const { return capacidadMaxPeso; }
-	FORCEINLINE void SetCapacidadCargaPeso(float capacidad) { capacidadMaxPeso = capacidad; }
-	FORCEINLINE float GetCapacidadCargaVolumen() const { return capacidadMaxVolumen; }
-	FORCEINLINE void SetCapacidadCargaVolumen(float capacidad) { capacidadMaxVolumen = capacidad; }
+	FORCEINLINE float GetCapacidadMaxPeso() const { return capacidadMaxPeso; }
+	FORCEINLINE void SetCapacidadMaxPeso(float _capacidadMaxPeso) { capacidadMaxPeso = _capacidadMaxPeso; }
+	FORCEINLINE float GetCapacidadMaxVolumen() const { return capacidadMaxVolumen; }
+	FORCEINLINE void SetCapacidadMaxVolumen(float _capacidadMaxVolumen) { capacidadMaxVolumen = _capacidadMaxVolumen; }
 
 public:
 	ANaveEnemigaTransporte();

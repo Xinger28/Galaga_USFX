@@ -15,12 +15,27 @@ class GALAGA_USFX_API ANaveEnemigaSuicida : public ANaveEnemiga
 	GENERATED_BODY()
 	
 private:
-	float TiempoDestruccion;
+	float Destruccion;
 	float RangoExplosion;
 
 public:
-	FORCEINLINE float GetTiempoDestruccion() const { return TiempoDestruccion; }
-	FORCEINLINE void SetTiempoDestruccion(float _TiempoDestruccion) { TiempoDestruccion = _TiempoDestruccion; }
-	FORCEINLINE float GetrangoExplosion() const { return RangoExplosion; }
-	FORCEINLINE void SetrangoExplosion(float _RangoExplosion) { RangoExplosion = _RangoExplosion; }
+	FORCEINLINE float GetDestruccion() const { return Destruccion; }
+	FORCEINLINE void SetDestruccion(float _Destruccion) { Destruccion = _Destruccion; }
+	FORCEINLINE float GetRangoExplosion() const { return RangoExplosion; }
+	FORCEINLINE void SetRangoExplosion(float _RangoExplosion) { RangoExplosion = _RangoExplosion; }
+
+public:
+	ANaveEnemigaSuicida();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+protected:
+	virtual void Ataque();
+	virtual void Explotar();
 };
