@@ -12,14 +12,12 @@ ANaveEnemigaNodriza::ANaveEnemigaNodriza()
 	RootComponent = mallaNaveEnemiga;
 }
 
-void ANaveEnemigaNodriza::BeginPlay()
-{
-	Super::BeginPlay();
-}
 
 void ANaveEnemigaNodriza::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	//FVector PosicionActual = GetActorLocation() + FVector(-1, 0, 0) * Speed * DeltaTime;
+	//SetActorLocation(PosicionActual);
 }
 
 void ANaveEnemigaNodriza::Ataque()

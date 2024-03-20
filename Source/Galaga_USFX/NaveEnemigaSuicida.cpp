@@ -12,14 +12,11 @@ ANaveEnemigaSuicida::ANaveEnemigaSuicida()
 	RootComponent = mallaNaveEnemiga;
 }
 
-void ANaveEnemigaSuicida::BeginPlay()
-{
-	Super::BeginPlay();
-}
-
 void ANaveEnemigaSuicida::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	//FVector PosicionActual = GetActorLocation() + FVector(-1, 0, 0) * Speed * DeltaTime;
+	//SetActorLocation(PosicionActual);
 }
 
 void ANaveEnemigaSuicida::Ataque()

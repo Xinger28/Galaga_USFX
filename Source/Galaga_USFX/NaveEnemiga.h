@@ -58,7 +58,7 @@ public:
 public:	
 	// Sets default values for this actor's properties
 	ANaveEnemiga();
-	float Speed;
+	//float Speed;
 
 protected:
 	// Called when the game starts or when spawned
@@ -75,4 +75,5 @@ public:
 	void Desaparecer() PURE_VIRTUAL(ANaveEnemiga::Desaparecer, );
 	void Cargar() PURE_VIRTUAL(ANaveEnemiga::Cargar, );
 	void Defender() PURE_VIRTUAL(ANaveEnemiga::Defender, );
+	void Camuflaje() PURE_VIRTUAL(ANaveEnemiga::Camuflaje, );
 };

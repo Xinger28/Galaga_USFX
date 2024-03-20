@@ -5,21 +5,21 @@
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
+	PrimaryActorTick.bCanEverTick = true;
+
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
-}
-
-void ANaveEnemigaCaza::BeginPlay()
-{
-	Super::BeginPlay();
 }
 
 void ANaveEnemigaCaza::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	/*FVector PosicionActual = GetActorLocation() + FVector(1, 0, 0) * Speed * DeltaTime;
+	SetActorLocation(PosicionActual);*/
+
 }
 
-void ANaveEnemigaCaza::ataque()
+void ANaveEnemigaCaza::Ataque()
 {
 }
 

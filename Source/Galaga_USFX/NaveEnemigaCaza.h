@@ -22,16 +22,14 @@ public:
 	ANaveEnemigaCaza();
 	FORCEINLINE int GetCantidadBombas() const { return CantitadadExplosivos; }
 	FORCEINLINE void SetCantidadBombas(int _cantitadadExplosivos) { CantitadadExplosivos = _cantitadadExplosivos; }
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	FORCEINLINE int GetArmasEspeciales() const { return ArmasEspeciales; }
+	FORCEINLINE void SetArmasEspeciales(int _ArmasEspeciales) { ArmasEspeciales = _ArmasEspeciales; }
 
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-	virtual void ataque();
+	virtual void Ataque();
 	virtual void Destruccion();
 };

@@ -30,10 +30,6 @@ public:
 public:
 		ANaveEnemigaEspia();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -41,4 +37,5 @@ public:
 protected:
 	virtual void Destruccion();
 	virtual void Retirada();
+	virtual void Camuflaje();
 };

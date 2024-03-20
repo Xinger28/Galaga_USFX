@@ -17,10 +17,10 @@ E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCaza.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCaza.generated.h
-E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporte.h
-E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporte.generated.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspia.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspia.generated.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaFantasma.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaFantasma.generated.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaJefe.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaJefe.generated.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodriza.h
@@ -31,5 +31,5 @@ E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimien
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimiento.generated.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaSuicida.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaSuicida.generated.h
-E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaFantasma.h
-E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaFantasma.generated.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporte.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporte.generated.h

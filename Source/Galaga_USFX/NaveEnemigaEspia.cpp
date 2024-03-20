@@ -12,14 +12,11 @@ ANaveEnemigaEspia::ANaveEnemigaEspia()
 	RootComponent = mallaNaveEnemiga;
 }
 
-void ANaveEnemigaEspia::BeginPlay()
-{
-	Super::BeginPlay();
-}
-
 void ANaveEnemigaEspia::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	//FVector PosicionActual = GetActorLocation() + FVector(-1, 0, 0) * Speed * DeltaTime;
+	//SetActorLocation(PosicionActual);
 }
 
 void ANaveEnemigaEspia::Destruccion()
@@ -27,5 +24,9 @@ void ANaveEnemigaEspia::Destruccion()
 }
 
 void ANaveEnemigaEspia::Retirada()
+{
+}
+
+void ANaveEnemigaEspia::Camuflaje()
 {
 }
