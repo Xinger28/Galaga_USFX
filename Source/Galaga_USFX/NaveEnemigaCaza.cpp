@@ -14,9 +14,8 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 void ANaveEnemigaCaza::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	/*FVector PosicionActual = GetActorLocation() + FVector(1, 0, 0) * Speed * DeltaTime;
-	SetActorLocation(PosicionActual);*/
-
+	FVector PosicionActual = GetActorLocation() + FVector(-1, 0, 0) * Speed * DeltaTime;
+	SetActorLocation(PosicionActual);
 }
 
 void ANaveEnemigaCaza::Ataque()

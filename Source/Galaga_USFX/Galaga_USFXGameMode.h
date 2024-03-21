@@ -25,6 +25,10 @@ class AGalaga_USFXGameMode : public AGameModeBase
 public:
 	AGalaga_USFXGameMode();
 
+protected:
+
+	virtual void BeginPlay() override;
+
 public:
 	//ANaveEnemiga* NaveEnemiga1;
 	ANaveEnemigaCaza* NaveEnemigaCaza1;
@@ -37,15 +41,12 @@ public:
 	ANaveEnemigaSuicida* NaveEnemigaSuicida1;
 	ANaveEnemigaTransporte* NaveEnemigaTransporte1;
 
-protected:
-
-	virtual void BeginPlay() override;
-
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 public:
+
 	TArray<ANaveEnemiga*> TANavesEnemigas;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
 	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
@@ -57,16 +58,16 @@ public:
 	TArray<ANaveEnemigaSuicida*> TANavesEnemigasSuicida;
 	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
 
-public:
-	TMap<int32, TArray<ANaveEnemigaCaza*>>ColumnaNavesEnemigasCaza;
-	TMap<int32, TArray<ANaveEnemigaEspia*>>ColumnaNavesEnemigasEspia;
-	TMap<int32, TArray<ANaveEnemigaFantasma*>>ColumnaNavesEnemigasFantasma;
-	TMap<int32, TArray<ANaveEnemigaJefe*>>ColumnaNavesEnemigasJefe;
-	TMap<int32, TArray<ANaveEnemigaNodriza*>>ColumnaNavesEnemigasNodriza;
-	TMap<int32, TArray<ANaveEnemigaProtector*>>ColumnaNavesEnemigasProtector;
-	TMap<int32, TArray<ANaveEnemigaReabastecimiento*>>ColumnaNavesEnemigasReabastecimiento;
-	TMap<int32, TArray<ANaveEnemigaSuicida*>>ColumnaNavesEnemigasSuicida;
-	TMap<int32, TArray<ANaveEnemigaTransporte*>>ColumnaNavesEnemigasTransporte;
+//public:
+//	TMap<int32, TArray<ANaveEnemigaCaza*>>ColumnaNavesEnemigasCaza;
+//	TMap<int32, TArray<ANaveEnemigaEspia*>>ColumnaNavesEnemigasEspia;
+//	TMap<int32, TArray<ANaveEnemigaFantasma*>>ColumnaNavesEnemigasFantasma;
+//	TMap<int32, TArray<ANaveEnemigaJefe*>>ColumnaNavesEnemigasJefe;
+//	TMap<int32, TArray<ANaveEnemigaNodriza*>>ColumnaNavesEnemigasNodriza;
+//	TMap<int32, TArray<ANaveEnemigaProtector*>>ColumnaNavesEnemigasProtector;
+//	TMap<int32, TArray<ANaveEnemigaReabastecimiento*>>ColumnaNavesEnemigasReabastecimiento;
+//	TMap<int32, TArray<ANaveEnemigaSuicida*>>ColumnaNavesEnemigasSuicida;
+//	TMap<int32, TArray<ANaveEnemigaTransporte*>>ColumnaNavesEnemigasTransporte;
 
 };
 
