@@ -20,6 +20,7 @@ void ANaveEnemigaTransporte::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	FVector NewLocation = GetActorLocation() + FVector(-1, 0, 0) * Speed * DeltaTime;
 	SetActorLocation(NewLocation);
+	Speed = 30.0f;
 
 }
 

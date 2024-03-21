@@ -15,8 +15,9 @@ ANaveEnemigaProtector::ANaveEnemigaProtector()
 void ANaveEnemigaProtector::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	FVector PosicionActual = GetActorLocation() + FVector(-1, 0, 0) * Speed * DeltaTime;
+	FVector PosicionActual = GetActorLocation() + FVector(-1, -1, 1) * Speed * DeltaTime;
 	SetActorLocation(PosicionActual);
+	Speed = 30.0f;
 }
 
 void ANaveEnemigaProtector::Defender()

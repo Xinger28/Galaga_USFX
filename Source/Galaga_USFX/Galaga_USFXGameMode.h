@@ -57,7 +57,11 @@ public:
 	TArray<ANaveEnemigaReabastecimiento*> TANavesEnemigasReabastecimiento;
 	TArray<ANaveEnemigaSuicida*> TANavesEnemigasSuicida;
 	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
+	
 
+protected:
+	UPROPERTY(EditDefaultsOnly, Category = "Enemy")
+	TArray<TSubclassOf<class ANaveEnemiga>> EnemyShipClasses;
 //public:
 //	TMap<int32, TArray<ANaveEnemigaCaza*>>ColumnaNavesEnemigasCaza;
 //	TMap<int32, TArray<ANaveEnemigaEspia*>>ColumnaNavesEnemigasEspia;

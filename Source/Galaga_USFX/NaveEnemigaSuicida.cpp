@@ -17,6 +17,7 @@ void ANaveEnemigaSuicida::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	FVector PosicionActual = GetActorLocation() + FVector(-1, 0, 0) * Speed * DeltaTime;
 	SetActorLocation(PosicionActual);
+	Speed = 30.0f;
 }
 
 void ANaveEnemigaSuicida::Ataque()

@@ -58,7 +58,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AGalaga_USFXGameMode)
 
 
-#define Galaga_USFX_Source_Galaga_USFX_Galaga_USFXGameMode_h_23_PRIVATE_PROPERTY_OFFSET
+#define Galaga_USFX_Source_Galaga_USFX_Galaga_USFXGameMode_h_23_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__EnemyShipClasses() { return STRUCT_OFFSET(AGalaga_USFXGameMode, EnemyShipClasses); }
+
+
 #define Galaga_USFX_Source_Galaga_USFX_Galaga_USFXGameMode_h_20_PROLOG
 #define Galaga_USFX_Source_Galaga_USFX_Galaga_USFXGameMode_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

@@ -17,6 +17,7 @@ void ANaveEnemigaEspia::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	FVector PosicionActual = GetActorLocation() + FVector(-1, 1, 0) * Speed * DeltaTime;
 	SetActorLocation(PosicionActual);
+	Speed = 30.0f;
 }
 
 void ANaveEnemigaEspia::Destruccion()
