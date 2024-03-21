@@ -16,6 +16,9 @@ ANaveEnemiga::ANaveEnemiga()
 	//mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 	mallaNaveEnemiga->SetupAttachment(RootComponent);
 	RootComponent = mallaNaveEnemiga;
+
+	Speed = 300.0f;
+	LimiteInferiorX = -1800.0f;
 }
 
 // Called when the game starts or when spawned
@@ -29,6 +32,5 @@ void ANaveEnemiga::BeginPlay()
 void ANaveEnemiga::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
 }
 

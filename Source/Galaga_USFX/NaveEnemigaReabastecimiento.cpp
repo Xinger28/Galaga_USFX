@@ -15,9 +15,19 @@ ANaveEnemigaReabastecimiento::ANaveEnemigaReabastecimiento()
 void ANaveEnemigaReabastecimiento::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	FVector PosicionActual = GetActorLocation() + FVector(-1, 0, 0) * Speed * DeltaTime;
-	SetActorLocation(PosicionActual);
-	Speed = 30.0f;
+
+	FVector PosicionActual = GetActorLocation();
+	float DesplazamientoX = Speed * DeltaTime;
+
+	FVector NuevaPosicion = FVector(PosicionActual.X + DesplazamientoX * -1, PosicionActual.Y , PosicionActual.Z );
+	SetActorLocation(NuevaPosicion);
+
+	//este codigo hace que vuelva ala posicion inicial
+
+	if (NuevaPosicion.X < LimiteInferiorX)
+	{
+		SetActorLocation(FVector(1800.0f, PosicionActual.Y, 160.0f));
+	}
 }
 
 void ANaveEnemigaReabastecimiento::Destruccion()
