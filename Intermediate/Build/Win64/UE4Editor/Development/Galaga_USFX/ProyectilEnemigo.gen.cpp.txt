@@ -1,0 +1,5 @@
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX\Definitions.Galaga_USFX.h
+D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX/ProyectilEnemigo.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ProyectilEnemigo.generated.h

@@ -117,27 +117,27 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFXPawn() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_GunOffset_MetaData[] = {
 		{ "Category", "Gameplay" },
-		{ "Comment", "/** Offset from the ships location to spawn projectiles */" },
+		{ "Comment", "/** Offset from the ships location to spawn projectiles */// este codigo es para que el arma dispare desde la punta de la nave\n" },
 		{ "ModuleRelativePath", "Galaga_USFXPawn.h" },
-		{ "ToolTip", "Offset from the ships location to spawn projectiles" },
+		{ "ToolTip", "Offset from the ships location to spawn projectiles // este codigo es para que el arma dispare desde la punta de la nave" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_GunOffset = { "GunOffset", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFXPawn, GunOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_GunOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_GunOffset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_FireRate_MetaData[] = {
 		{ "Category", "Gameplay" },
-		{ "Comment", "/* How fast the weapon will fire */" },
+		{ "Comment", "/* How fast the weapon will fire */// este codigo es para que el arma dispare cada cierto tiempo\n" },
 		{ "ModuleRelativePath", "Galaga_USFXPawn.h" },
-		{ "ToolTip", "How fast the weapon will fire" },
+		{ "ToolTip", "How fast the weapon will fire // este codigo es para que el arma dispare cada cierto tiempo" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_FireRate = { "FireRate", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFXPawn, FireRate), METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_FireRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_FireRate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_MoveSpeed_MetaData[] = {
 		{ "Category", "Gameplay" },
-		{ "Comment", "/* The speed our ship moves around the level */" },
+		{ "Comment", "/* The speed our ship moves around the level */// este codigo es para que la nave se mueva a cierta velocidad\n" },
 		{ "ModuleRelativePath", "Galaga_USFXPawn.h" },
-		{ "ToolTip", "The speed our ship moves around the level" },
+		{ "ToolTip", "The speed our ship moves around the level // este codigo es para que la nave se mueva a cierta velocidad" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFXPawn, MoveSpeed), METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFXPawn_Statics::NewProp_MoveSpeed_MetaData)) };
@@ -186,7 +186,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFXPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGalaga_USFXPawn, 682241231);
+	IMPLEMENT_CLASS(AGalaga_USFXPawn, 2298607509);
 	template<> GALAGA_USFX_API UClass* StaticClass<AGalaga_USFXPawn>()
 	{
 		return AGalaga_USFXPawn::StaticClass();

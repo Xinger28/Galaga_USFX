@@ -2,6 +2,7 @@
 
 
 #include "NaveEnemigaCaza.h"
+#include "ProyectilEnemigo.h"
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
@@ -9,6 +10,14 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+    
+	DistanciaDisparo = 1000.0f;
+	
+}
+
+void ANaveEnemigaCaza::BeginPlay()
+{
+	Super::BeginPlay();
 
 }
 
@@ -27,6 +36,25 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 	{
 		SetActorLocation(FVector(1800.0f, PosicionActual.Y, 160.0f));
 	}
+
+	static const float TiempoEntreDisparos = 1.0f;
+	static float TiempoTranscurrido = 0.0f;
+
+	TiempoTranscurrido += DeltaTime;
+	if (TiempoTranscurrido >= TiempoEntreDisparos)
+	{
+		Disparar();
+		TiempoTranscurrido = 0.0f;
+	}
+
+
+}
+
+void ANaveEnemigaCaza::Disparar()
+{
+	FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * 1;
+	FRotator SpawnRotation = GetActorRotation();
+	AActor* NewProyectil = GetWorld()->SpawnActor<AProyectilEnemigo>(SpawnLocation, SpawnRotation);
 }
 
 void ANaveEnemigaCaza::Ataque()

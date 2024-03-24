@@ -3,3 +3,5 @@ E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCaza.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
 E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCaza.generated.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Source\Galaga_USFX\ProyectilEnemigo.h
+E:\Galaga_USFX_Proyecto\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ProyectilEnemigo.generated.h

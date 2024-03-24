@@ -14,6 +14,20 @@ class GALAGA_USFX_API ANaveEnemigaCaza : public ANaveEnemiga
 {
 	GENERATED_BODY()
 
+
+
+public:
+
+	/*UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Proyectil")
+	TSubclassOf<class AProyectilEnemigo> ProyectilEnemigoClass;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Proyectil")*/
+	
+	float DistanciaDisparo;
+
+	//FTimerHandle TimerHandle_Disparo;
+
+
 private:
 	int ArmasEspeciales;
 	int CantitadadExplosivos;
@@ -30,6 +44,11 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
+	virtual void BeginPlay() override;
+
+protected:
 	virtual void Ataque();
 	virtual void Destruccion();
+	void Disparar();
+
 };

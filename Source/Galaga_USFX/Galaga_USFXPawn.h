@@ -27,14 +27,17 @@ public:
 	AGalaga_USFXPawn();
 
 	/** Offset from the ships location to spawn projectiles */
+	// este codigo es para que el arma dispare desde la punta de la nave
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite )
 	FVector GunOffset;
 	
 	/* How fast the weapon will fire */
+	// este codigo es para que el arma dispare cada cierto tiempo
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	float FireRate;
 
 	/* The speed our ship moves around the level */
+	// este codigo es para que la nave se mueva a cierta velocidad
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	float MoveSpeed;
 
