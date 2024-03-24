@@ -2,7 +2,8 @@
 
 
 #include "NaveEnemigaCaza.h"
-#include "ProyectilEnemigo.h"
+#include "Engine/World.h"
+#include "Galaga_USFXProjectile.h"
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
@@ -11,7 +12,9 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
     
-	DistanciaDisparo = 1000.0f;
+	/*TiempoEntreDisparos = 2.0f;
+	TiempoUltimoDisparo = 0.0f;*/
+	//DistanciaDisparo = 1000.0f;
 	
 }
 
@@ -32,13 +35,8 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 
 	//este codigo hace que vuelva ala posicion inicial
 
-	if (NuevaPosicion.X < LimiteInferiorX)
-	{
-		SetActorLocation(FVector(1800.0f, PosicionActual.Y, 160.0f));
-	}
-
-	static const float TiempoEntreDisparos = 1.0f;
-	static float TiempoTranscurrido = 0.0f;
+	static const float TiempoEntreDisparos = 2.0f;
+	static float TiempoTranscurrido = 100.0f;
 
 	TiempoTranscurrido += DeltaTime;
 	if (TiempoTranscurrido >= TiempoEntreDisparos)
@@ -46,15 +44,29 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 		Disparar();
 		TiempoTranscurrido = 0.0f;
 	}
+	if (NuevaPosicion.X < LimiteInferiorX)
+	{
+		SetActorLocation(FVector(1800.0f, PosicionActual.Y, 160.0f));
+	}
 
+
+	//if (GetWorld()->GetTimeSeconds() - TiempoUltimoDisparo > TiempoUltimoDisparo)
+	//{
+	//	Disparar(); // Llama al método de disparo
+	//	TiempoUltimoDisparo = GetWorld()->GetTimeSeconds(); // Actualiza el tiempo del último disparo
+	//}
+	
 
 }
 
 void ANaveEnemigaCaza::Disparar()
 {
-	FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * 1;
+
+	FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * 100;
+
 	FRotator SpawnRotation = GetActorRotation();
-	AActor* NewProyectil = GetWorld()->SpawnActor<AProyectilEnemigo>(SpawnLocation, SpawnRotation);
+	AActor* NewProyectil = GetWorld()->SpawnActor<AGalaga_USFXProjectile>(SpawnLocation, SpawnRotation);
+
 }
 
 void ANaveEnemigaCaza::Ataque()

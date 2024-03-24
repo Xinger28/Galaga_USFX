@@ -29,7 +29,6 @@ AProyectilEnemigo::AProyectilEnemigo()
 void AProyectilEnemigo::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame

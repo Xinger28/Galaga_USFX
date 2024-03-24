@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "NaveEnemiga.h"
+#include "Galaga_USFXProjectile.h"
 #include "NaveEnemigaCaza.generated.h"
+
 
 /**
  * 
@@ -16,15 +18,15 @@ class GALAGA_USFX_API ANaveEnemigaCaza : public ANaveEnemiga
 
 
 
-public:
+//public:
 
 	/*UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Proyectil")
 	TSubclassOf<class AProyectilEnemigo> ProyectilEnemigoClass;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Proyectil")*/
 	
-	float DistanciaDisparo;
-
+	/*float DistanciaDisparo;
+	void Disparar();*/
 	//FTimerHandle TimerHandle_Disparo;
 
 
@@ -49,6 +51,11 @@ protected:
 protected:
 	virtual void Ataque();
 	virtual void Destruccion();
-	void Disparar();
+	
+private:
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+	virtual void Disparar();
 
+	/*float TiempoEntreDisparos;
+	float TiempoUltimoDisparo;*/
 };

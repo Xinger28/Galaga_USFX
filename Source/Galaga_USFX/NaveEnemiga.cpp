@@ -17,7 +17,7 @@ ANaveEnemiga::ANaveEnemiga()
 	mallaNaveEnemiga->SetupAttachment(RootComponent);
 	RootComponent = mallaNaveEnemiga;
 
-	Speed = 300.0f;
+	Speed = 200.0f;
 	LimiteInferiorX = -1800.0f;
 }
 

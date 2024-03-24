@@ -18,8 +18,43 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 	GALAGA_USFX_API UClass* Z_Construct_UClass_ANaveEnemiga();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX();
 // End Cross Module References
+	DEFINE_FUNCTION(ANaveEnemigaCaza::execDisparar)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Disparar();
+		P_NATIVE_END;
+	}
 	void ANaveEnemigaCaza::StaticRegisterNativesANaveEnemigaCaza()
 	{
+		UClass* Class = ANaveEnemigaCaza::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "Disparar", &ANaveEnemigaCaza::execDisparar },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "NaveEnemigaCaza.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANaveEnemigaCaza, nullptr, "Disparar", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ANaveEnemigaCaza_Disparar()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ANaveEnemigaCaza_NoRegister()
 	{
@@ -28,6 +63,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 	struct Z_Construct_UClass_ANaveEnemigaCaza_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -37,6 +73,9 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 	UObject* (*const Z_Construct_UClass_ANaveEnemigaCaza_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_ANaveEnemiga,
 		(UObject* (*)())Z_Construct_UPackage__Script_Galaga_USFX,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ANaveEnemigaCaza_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ANaveEnemigaCaza_Disparar, "Disparar" }, // 3289333286
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANaveEnemigaCaza_Statics::Class_MetaDataParams[] = {
@@ -53,11 +92,11 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x009000A4u,
@@ -72,7 +111,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemigaCaza, 802680256);
+	IMPLEMENT_CLASS(ANaveEnemigaCaza, 3891005428);
 	template<> GALAGA_USFX_API UClass* StaticClass<ANaveEnemigaCaza>()
 	{
 		return ANaveEnemigaCaza::StaticClass();

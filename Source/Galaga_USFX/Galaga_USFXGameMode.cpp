@@ -37,7 +37,7 @@ void AGalaga_USFXGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FVector UbicacionInicioNavesEnemigasCaza = FVector(-500.0f, -250.0f, 200.0f);
+	FVector UbicacionInicioNavesEnemigasCaza = FVector(-150.0f, -250.0f, 200.0f);
 	FVector UbicacionInicioNavesEnemigasEspia = FVector(-400.0f, -250.0f, 200.0f);
 	FVector UbicacionInicioNavesEnemigasFantasma = FVector(-300.0f, -250.0f, 200.0f);
 	FVector UbicacionInicioNavesEnemigasJefe = FVector(-200.0f, -250.0f, 200.0f);
@@ -54,16 +54,17 @@ void AGalaga_USFXGameMode::BeginPlay()
 	{
 		//NaveEnemigaCaza1 = World->SpawnActor<ANaveEnemigaCaza>(UbicacionInicioNavesEnemigasCaza, rotacionNave);
 		//NaveEnemigaCaza1->Speed = 10.0f;
-		//NaveEnemigaEspia1 = World->SpawnActor<ANaveEnemigaEspia>(UbicacionInicioNavesEnemigasEspia, rotacionNave);
-		//NaveEnemigaFantasma1 = World->SpawnActor<ANaveEnemigaFantasma>(UbicacionInicioNavesEnemigasFantasma, rotacionNave);
-		//NaveEnemigaJefe1 = World->SpawnActor<ANaveEnemigaJefe>(UbicacionInicioNavesEnemigasJefe, rotacionNave);
-		//NaveEnemigaNodriza1 = World->SpawnActor<ANaveEnemigaNodriza>(UbicacionInicioNavesEnemigasNodriza, rotacionNave);
-		//NaveEnemigaProtector1 = World->SpawnActor<ANaveEnemigaProtector>(UbicacionInicioNavesEnemigasProtector, rotacionNave);
-		//NaveEnemigaReabastecimiento1 = World->SpawnActor<ANaveEnemigaReabastecimiento>(UbicacionInicioNavesEnemigasReabastecimiento, rotacionNave);
-		//NaveEnemigaSuicida1 = World->SpawnActor<ANaveEnemigaSuicida>(UbicacionInicioNavesEnemigasSuicida, rotacionNave);
-		//NaveEnemigaTransporte1 = World->SpawnActor<ANaveEnemigaTransporte>(UbicacionInicioNavesEnemigasTransporte, rotacionNave);
 
 		 // Genera 30 naves enemigas con cantidades aleatorias de diferentes tipos
+		for (int j = 0; j < 5; j++)
+		{
+			FVector	PosicionActual = FVector (UbicacionInicioNavesEnemigasCaza.X, UbicacionInicioNavesEnemigasCaza.Y + j * 200, UbicacionInicioNavesEnemigasCaza.Z);
+			ANaveEnemigaCaza* NaveEnemigaCazaTemporal = World->SpawnActor<ANaveEnemigaCaza>(PosicionActual, rotacionNave);
+
+			//TANavesEnemigasCaza.Add(NaveEnemigaCazaTemporal);
+			TANavesEnemigas.Push(NaveEnemigaCazaTemporal);
+		}
+
 		for (int i = 0; i < 6; i++)
 		{
 			for (int j = 0; j < 5; j++)
@@ -79,30 +80,9 @@ void AGalaga_USFXGameMode::BeginPlay()
 				// Spawnea la nave enemiga
 				AActor* NewEnemy = GetWorld()->SpawnActor<AActor>(EnemyClass, SpawnLocation, SpawnRotation);
 			}
-		}
 
-		/*for (int i = 0; i < 5; i++) {
-			FVector PosicionNaveActual = FVector(UbicacionInicioNavesEnemigasCaza.X, UbicacionInicioNavesEnemigasCaza.Y + i * 150, UbicacionInicioNavesEnemigasTransporte.Z);
-			ANaveEnemigaCaza* NaveEnemigaCazaTemporal = World->SpawnActor<ANaveEnemigaCaza>(PosicionNaveActual, rotacionNave);
-			NaveEnemigaCazaTemporal->Speed = 20.0f;
-
-			TANavesEnemigasCaza.Push(NaveEnemigaCazaTemporal); 
-			TANavesEnemigas.Push(NaveEnemigaCazaTemporal); 
 		}
-		for (int i = 0; i < 5; i++) {
-			FVector PosicionNaveActual = FVector(UbicacionInicioNavesEnemigasEspia.X, UbicacionInicioNavesEnemigasEspia.Y + i * 150, UbicacionInicioNavesEnemigasEspia.Z);
-			ANaveEnemigaEspia* NaveEnemigaEspiaTemporal = World->SpawnActor<ANaveEnemigaEspia>(PosicionNaveActual, rotacionNave);
-			NaveEnemigaEspiaTemporal->Speed = 20.0f;
-			TANavesEnemigasEspia.Push(NaveEnemigaEspiaTemporal);
-			TANavesEnemigas.Push(NaveEnemigaEspiaTemporal);
-		}
-		for (int i = 0; i < 5; i++) {
-			FVector PosicionNaveActual = FVector(UbicacionInicioNavesEnemigasFantasma.X, UbicacionInicioNavesEnemigasFantasma.Y + i * 150, UbicacionInicioNavesEnemigasFantasma.Z);
-			ANaveEnemigaFantasma* NaveEnemigaFantasmaTemporal = World->SpawnActor<ANaveEnemigaFantasma>(PosicionNaveActual, rotacionNave);
-			NaveEnemigaFantasmaTemporal->Speed = 20.0f;
-			TANavesEnemigasFantasma.Push(NaveEnemigaFantasmaTemporal);
-			TANavesEnemigas.Push(NaveEnemigaFantasmaTemporal);
-		}*/
+	
 	}
 }
 

@@ -62,16 +62,6 @@ public:
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Enemy")
 	TArray<TSubclassOf<class ANaveEnemiga>> EnemyShipClasses;
-//public:
-//	TMap<int32, TArray<ANaveEnemigaCaza*>>ColumnaNavesEnemigasCaza;
-//	TMap<int32, TArray<ANaveEnemigaEspia*>>ColumnaNavesEnemigasEspia;
-//	TMap<int32, TArray<ANaveEnemigaFantasma*>>ColumnaNavesEnemigasFantasma;
-//	TMap<int32, TArray<ANaveEnemigaJefe*>>ColumnaNavesEnemigasJefe;
-//	TMap<int32, TArray<ANaveEnemigaNodriza*>>ColumnaNavesEnemigasNodriza;
-//	TMap<int32, TArray<ANaveEnemigaProtector*>>ColumnaNavesEnemigasProtector;
-//	TMap<int32, TArray<ANaveEnemigaReabastecimiento*>>ColumnaNavesEnemigasReabastecimiento;
-//	TMap<int32, TArray<ANaveEnemigaSuicida*>>ColumnaNavesEnemigasSuicida;
-//	TMap<int32, TArray<ANaveEnemigaTransporte*>>ColumnaNavesEnemigasTransporte;
 
 };
 
