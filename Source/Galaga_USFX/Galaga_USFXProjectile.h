@@ -18,6 +18,7 @@ class AGalaga_USFXProjectile : public AActor
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* ProjectileMesh;
 
+private:
 	/** Projectile movement component */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 	UProjectileMovementComponent* ProjectileMovement;
@@ -33,5 +34,9 @@ public:
 	FORCEINLINE UStaticMeshComponent* GetProjectileMesh() const { return ProjectileMesh; }
 	/** Returns ProjectileMovement subobject **/
 	FORCEINLINE UProjectileMovementComponent* GetProjectileMovement() const { return ProjectileMovement; }
+
+public:
+	// Método para configurar la velocidad del proyectil
+	void SetProjectileVelocity(const FVector& NewVelocity);
 };
 

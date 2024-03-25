@@ -42,11 +42,10 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Gameplay" },
 		{ "ModuleRelativePath", "NaveEnemigaCaza.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANaveEnemigaCaza, nullptr, "Disparar", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANaveEnemigaCaza, nullptr, "Disparar", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANaveEnemigaCaza_Disparar_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_ANaveEnemigaCaza_Disparar()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -75,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Galaga_USFX,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ANaveEnemigaCaza_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ANaveEnemigaCaza_Disparar, "Disparar" }, // 3289333286
+		{ &Z_Construct_UFunction_ANaveEnemigaCaza_Disparar, "Disparar" }, // 1850126429
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANaveEnemigaCaza_Statics::Class_MetaDataParams[] = {
@@ -111,7 +110,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemigaCaza, 3891005428);
+	IMPLEMENT_CLASS(ANaveEnemigaCaza, 774618333);
 	template<> GALAGA_USFX_API UClass* StaticClass<ANaveEnemigaCaza>()
 	{
 		return ANaveEnemigaCaza::StaticClass();

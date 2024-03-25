@@ -43,3 +43,11 @@ void AGalaga_USFXProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAc
 
 	Destroy();
 }
+
+void AGalaga_USFXProjectile::SetProjectileVelocity(const FVector& NewVelocity)
+{
+	if (ProjectileMovement)
+	{
+		ProjectileMovement->Velocity = NewVelocity;
+	}
+}

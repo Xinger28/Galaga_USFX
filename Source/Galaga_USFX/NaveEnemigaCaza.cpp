@@ -12,10 +12,9 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
     
-	/*TiempoEntreDisparos = 2.0f;
-	TiempoUltimoDisparo = 0.0f;*/
-	//DistanciaDisparo = 1000.0f;
-	
+	TiempoEntreProyectil = 1.5f;
+	TiempoUltimoProyectil = 0.0f;
+	VelocidadProyectil = 1000.0f;
 }
 
 void ANaveEnemigaCaza::BeginPlay()
@@ -27,6 +26,7 @@ void ANaveEnemigaCaza::BeginPlay()
 void ANaveEnemigaCaza::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 	FVector PosicionActual = GetActorLocation();
 	float DesplazamientoX = Speed * DeltaTime;
 
@@ -34,39 +34,43 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 	SetActorLocation(NuevaPosicion);
 
 	//este codigo hace que vuelva ala posicion inicial
-
-	static const float TiempoEntreDisparos = 2.0f;
-	static float TiempoTranscurrido = 100.0f;
-
-	TiempoTranscurrido += DeltaTime;
-	if (TiempoTranscurrido >= TiempoEntreDisparos)
-	{
-		Disparar();
-		TiempoTranscurrido = 0.0f;
-	}
 	if (NuevaPosicion.X < LimiteInferiorX)
 	{
 		SetActorLocation(FVector(1800.0f, PosicionActual.Y, 160.0f));
+
+		// Reiniciar el tiempo desde el último disparo después de reaparecer
+		TiempoUltimoProyectil = 0.0f;
 	}
 
-
-	//if (GetWorld()->GetTimeSeconds() - TiempoUltimoDisparo > TiempoUltimoDisparo)
-	//{
-	//	Disparar(); // Llama al método de disparo
-	//	TiempoUltimoDisparo = GetWorld()->GetTimeSeconds(); // Actualiza el tiempo del último disparo
-	//}
+	TiempoUltimoProyectil += DeltaTime;
 	
+	// Verificar si ha pasado el tiempo suficiente desde el último disparo
+	if (TiempoUltimoProyectil >= TiempoEntreProyectil)
+	{
+		// Disparar
+		Disparar();
 
+		// Reiniciar el tiempo desde el último disparo
+		TiempoUltimoProyectil = 0.f;
+	}
 }
 
 void ANaveEnemigaCaza::Disparar()
 {
 
-	FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * 100;
+	// Obtén la ubicación de la nave caza para spawnear el proyectil
+	FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * -100;//distancia de disparo
 
-	FRotator SpawnRotation = GetActorRotation();
-	AActor* NewProyectil = GetWorld()->SpawnActor<AGalaga_USFXProjectile>(SpawnLocation, SpawnRotation);
+	// Spawnear el proyectil
+	AGalaga_USFXProjectile* NewProyectil = GetWorld()->SpawnActor<AGalaga_USFXProjectile>(AGalaga_USFXProjectile::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
 
+	if (NewProyectil)
+	{
+		// Modificar dirección y velocidad según sea necesario
+		FVector SpawnDirection = FVector(-1, 0.f, 0.f); // Ejemplo: disparar hacia abajo
+		NewProyectil->SetProjectileVelocity(SpawnDirection * VelocidadProyectil);
+	 // Ajustar velocidad del proyectil
+	}
 }
 
 void ANaveEnemigaCaza::Ataque()
