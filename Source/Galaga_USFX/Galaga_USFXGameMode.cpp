@@ -12,6 +12,7 @@
 #include "NaveEnemigaReabastecimiento.h"
 #include "NaveEnemigaSuicida.h"
 #include "NaveEnemigaTransporte.h"
+#include "Galaga_USFXProjectile.h"
 
 
 AGalaga_USFXGameMode::AGalaga_USFXGameMode()
@@ -21,7 +22,7 @@ AGalaga_USFXGameMode::AGalaga_USFXGameMode()
 	DefaultPawnClass = AGalaga_USFXPawn::StaticClass();
 
 	// Agrega las clases de las naves enemigas a la lista
-	EnemyShipClasses.Add(ANaveEnemigaCaza::StaticClass());
+	//EnemyShipClasses.Add(ANaveEnemigaCaza::StaticClass());
 	EnemyShipClasses.Add(ANaveEnemigaTransporte::StaticClass());
 	EnemyShipClasses.Add(ANaveEnemigaSuicida::StaticClass());
 	EnemyShipClasses.Add(ANaveEnemigaReabastecimiento::StaticClass());
@@ -58,7 +59,7 @@ void AGalaga_USFXGameMode::BeginPlay()
 		 // Genera 30 naves enemigas con cantidades aleatorias de diferentes tipos
 		for (int j = 0; j < 5; j++)
 		{
-			FVector	PosicionActual = FVector (UbicacionInicioNavesEnemigasCaza.X, UbicacionInicioNavesEnemigasCaza.Y + j * 200, UbicacionInicioNavesEnemigasCaza.Z);
+			FVector	PosicionActual = FVector (1800.0f, UbicacionInicioNavesEnemigasCaza.Y + j * 200, UbicacionInicioNavesEnemigasCaza.Z);
 			ANaveEnemigaCaza* NaveEnemigaCazaTemporal = World->SpawnActor<ANaveEnemigaCaza>(PosicionActual, rotacionNave);
 
 			//TANavesEnemigasCaza.Add(NaveEnemigaCazaTemporal);

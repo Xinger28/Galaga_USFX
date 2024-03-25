@@ -13,7 +13,7 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
     
 	TiempoEntreProyectil = 1.5f;
-	TiempoUltimoProyectil = 0.0f;
+	TiempoUltimoProyectil = 100.0f;
 	VelocidadProyectil = 1000.0f;
 }
 
@@ -33,25 +33,22 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 	FVector NuevaPosicion = FVector(PosicionActual.X + DesplazamientoX * -1, PosicionActual.Y, PosicionActual.Z);
 	SetActorLocation(NuevaPosicion);
 
-	//este codigo hace que vuelva ala posicion inicial
-	if (NuevaPosicion.X < LimiteInferiorX)
-	{
-		SetActorLocation(FVector(1800.0f, PosicionActual.Y, 160.0f));
-
-		// Reiniciar el tiempo desde el último disparo después de reaparecer
-		TiempoUltimoProyectil = 0.0f;
-	}
-
 	TiempoUltimoProyectil += DeltaTime;
-	
+
 	// Verificar si ha pasado el tiempo suficiente desde el último disparo
 	if (TiempoUltimoProyectil >= TiempoEntreProyectil)
 	{
 		// Disparar
 		Disparar();
 
-		// Reiniciar el tiempo desde el último disparo
-		TiempoUltimoProyectil = 0.f;
+		// Reiniciar el tiempo
+		TiempoUltimoProyectil = 0.0f;
+	}
+
+	//este codigo hace que vuelva ala posicion inicial
+	if (NuevaPosicion.X < LimiteInferiorX)
+	{
+		SetActorLocation(FVector(1800.0f, PosicionActual.Y, 160.0f));
 	}
 }
 
