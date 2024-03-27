@@ -13,7 +13,7 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
     
 	TiempoEntreProyectil = 1.5f;
-	TiempoUltimoProyectil = 100.0f;
+	TiempoUltimoProyectil = 0.0f;
 	VelocidadProyectil = 1000.0f;
 }
 
@@ -33,6 +33,7 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 	FVector NuevaPosicion = FVector(PosicionActual.X + DesplazamientoX * -1, PosicionActual.Y, PosicionActual.Z);
 	SetActorLocation(NuevaPosicion);
 
+
 	TiempoUltimoProyectil += DeltaTime;
 
 	// Verificar si ha pasado el tiempo suficiente desde el último disparo
@@ -48,7 +49,7 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 	//este codigo hace que vuelva ala posicion inicial
 	if (NuevaPosicion.X < LimiteInferiorX)
 	{
-		SetActorLocation(FVector(1800.0f, PosicionActual.Y, 160.0f));
+		SetActorLocation(FVector(1800.0f, PosicionActual.Y, 200.0f));
 	}
 }
 
@@ -64,7 +65,7 @@ void ANaveEnemigaCaza::Disparar()
 	if (NewProyectil)
 	{
 		// Modificar dirección y velocidad según sea necesario
-		FVector SpawnDirection = FVector(-1, 0.f, 0.f); // Ejemplo: disparar hacia abajo
+		FVector SpawnDirection = FVector(-1.0f, 0.f, 0.f); // Ejemplo: disparar hacia abajo
 		NewProyectil->SetProjectileVelocity(SpawnDirection * VelocidadProyectil);
 	 // Ajustar velocidad del proyectil
 	}

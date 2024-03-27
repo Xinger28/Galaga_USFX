@@ -17,7 +17,7 @@ AGalaga_USFXProjectile::AGalaga_USFXProjectile()
 	ProjectileMesh->SetStaticMesh(ProjectileMeshAsset.Object);
 	ProjectileMesh->SetupAttachment(RootComponent);
 	ProjectileMesh->BodyInstance.SetCollisionProfileName("Projectile");
-	ProjectileMesh->OnComponentHit.AddDynamic(this, &AGalaga_USFXProjectile::OnHit);		// set up a notification for when this component hits something
+	ProjectileMesh->OnComponentHit.AddDynamic(this, &AGalaga_USFXProjectile::OnHit);	// set up a notification for when this component hits something
 	RootComponent = ProjectileMesh;
 
 	// Use a ProjectileMovementComponent to govern this projectile's movement
@@ -40,7 +40,6 @@ void AGalaga_USFXProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAc
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 20.0f, GetActorLocation());
 	}
-
 	Destroy();
 }
 

@@ -42,7 +42,7 @@ protected:
 	virtual void Destruccion();
 	
 private:
-	UFUNCTION()
+
 	virtual void Disparar();
 
 

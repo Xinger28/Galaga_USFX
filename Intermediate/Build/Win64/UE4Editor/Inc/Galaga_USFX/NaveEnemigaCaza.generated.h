@@ -14,16 +14,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GALAGA_USFX_NaveEnemigaCaza_generated_h
 
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_17_SPARSE_DATA
-#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_17_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execDisparar);
-
-
-#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execDisparar);
-
-
+#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_17_RPC_WRAPPERS
+#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_17_RPC_WRAPPERS_NO_PURE_DECLS
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANaveEnemigaCaza(); \

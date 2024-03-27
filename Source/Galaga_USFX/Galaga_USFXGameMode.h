@@ -49,14 +49,14 @@ public:
 
 	TArray<ANaveEnemiga*> TANavesEnemigas;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
-	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
+	/*TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
 	TArray<ANaveEnemigaFantasma*> TANavesEnemigasFantasma;
 	TArray<ANaveEnemigaJefe*> TANavesEnemigasJefe;
 	TArray<ANaveEnemigaNodriza*> TANavesEnemigasNodriza;
 	TArray<ANaveEnemigaProtector*> TANavesEnemigasProtector;
 	TArray<ANaveEnemigaReabastecimiento*> TANavesEnemigasReabastecimiento;
 	TArray<ANaveEnemigaSuicida*> TANavesEnemigasSuicida;
-	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
+	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;*/
 	
 
 protected:
